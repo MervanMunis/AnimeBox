@@ -1,0 +1,15 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    import: configserver:http://localhost:9296
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: ANIME-CATALOG
+            uri: lb://ANIME-CATALOG
+            predicates:
+              - Path=/anime/**
