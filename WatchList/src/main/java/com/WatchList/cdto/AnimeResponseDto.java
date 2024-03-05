@@ -1,4 +1,4 @@
-package com.AnimeCatalog.dto;
+package com.WatchList.cdto;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Setter
 @Getter
 @Builder
-public class AnimeRequestDto {
+public class AnimeResponseDto {
 
     private long id;
     private String animeName;

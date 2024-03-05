@@ -14,7 +14,7 @@ public class AnimeMapper {
                 .history(animeRequestDto.getHistory())
                 .imdb(animeRequestDto.getImdb())
                 .numberOfEpisodes(animeRequestDto.getNumberOfEpisodes())
-                .image(animeRequestDto.getImage())
+//                .image(animeRequestDto.getImage())
                 .build();
     }
 
@@ -28,7 +28,7 @@ public class AnimeMapper {
                 .history(anime.getHistory())
                 .imdb(anime.getImdb())
                 .numberOfEpisodes(anime.getNumberOfEpisodes())
-                .image(anime.getImage())
+//                .image(anime.getImage())
                 .build();
     }
 }

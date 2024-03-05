@@ -1,4 +1,4 @@
-package com.AnimeCatalog.dto;
+package com.WatchList.cdto;
 
 import lombok.*;
 

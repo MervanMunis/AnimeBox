@@ -2,7 +2,6 @@ package com.AnimeCatalog.dto;
 
 import lombok.*;
 
-import java.awt.*;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -16,8 +15,8 @@ public class AnimeResponseDto {
     private String animeName;
     private LocalDate history;
     private String category;
-    private TextArea subject;
+    private String subject;
     private int numberOfEpisodes;
     private float imdb;
-    private byte[] image;
+//    private byte[] image;
 }

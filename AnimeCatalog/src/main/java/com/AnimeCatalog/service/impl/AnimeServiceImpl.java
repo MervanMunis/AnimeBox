@@ -108,7 +108,7 @@ public class AnimeServiceImpl implements IAnimeService {
         animeResponseDto.setHistory(animeRequestDto.getHistory());
         animeResponseDto.setImdb(animeRequestDto.getImdb());
         animeResponseDto.setNumberOfEpisodes(animeRequestDto.getNumberOfEpisodes());
-        animeResponseDto.setImage(animeRequestDto.getImage());
+//        animeResponseDto.setImage(animeRequestDto.getImage());
 
         log.info("Anime Is Updated");
         return animeResponseDto;

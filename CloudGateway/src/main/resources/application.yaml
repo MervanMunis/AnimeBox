@@ -13,3 +13,7 @@ spring:
             uri: lb://ANIME-CATALOG
             predicates:
               - Path=/anime/**
+          - id: WATCH-LIST
+            uri: lb://WATCH-LIST
+            predicates: 
+              - Path=/watch-list/**

@@ -8,9 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
@@ -32,13 +30,13 @@ public class AnimeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AnimeResponseDto>>  getAllAnime() {
+    public ResponseEntity<List<AnimeResponseDto>> getAllAnime() {
         List<AnimeResponseDto> animeList = animeService.getAllAnime();
         return ResponseEntity.ok(animeList);
     }
 
     @GetMapping("/category")
-    public ResponseEntity<List<AnimeResponseDto>> getAllAnimeByCategory(String category) {
+    public ResponseEntity<List<AnimeResponseDto>> getAllAnimeByCategory(@RequestParam String category) {
         List<AnimeResponseDto> animeList = animeService.getAllAnimeByCategory(category);
         return ResponseEntity.ok(animeList);
     }

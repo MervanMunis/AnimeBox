@@ -1,15 +1,13 @@
-package com.AnimeCatalog.dto;
+package com.WatchList.external;
 
 import lombok.*;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
+@Data
 @Builder
-public class AnimeRequestDto {
+public class AnimeResponseDto {
 
     private long id;
     private String animeName;

@@ -1,23 +1,30 @@
-package com.AnimeCatalog.entity;
+package com.WatchList.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.time.LocalDate;
 
-@Getter
-@Setter
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Builder
 @Entity
-@Table(name = "animes")
-public class Anime {
-
+@Table(name = "ANIME_LIST")
+public class AnimeItem {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+    private Long id;
+    
     @Column(name = "ANIME_NAME")
     private String animeName;
 
@@ -35,8 +42,5 @@ public class Anime {
 
     @Column(name = "IMDB")
     private float imdb;
-
-//    @Lob
-//    @Column(name = "IMAGE", columnDefinition = "longblob")
-//    private byte[] image;
+ 
 }
