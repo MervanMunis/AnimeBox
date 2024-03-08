@@ -17,3 +17,15 @@ spring:
             uri: lb://WATCH-LIST
             predicates: 
               - Path=/watch-list/**
+          - id: OLLAMA-AI
+            uri: lb://OLLAMA-AI
+            predicates:
+                - Path=/ollamaaiApi/**
+          - id: OPENAI-SERVICE
+            uri: lb://OPENAI-SERVICE
+            predicates:
+                - Path=/openaiApi/**
+          - id: ANIME-FINDER
+            uri: lb://ANIME-FINDER
+            predicates:
+                - Path=//api/anime-finder-bot/**
