@@ -8,7 +8,7 @@ def handle_error(message):
 # Configure Gemini model (replace with your API key)
 def configure_gemini():
     try:
-        api_key = "AIzaSyCiZZy829KPOkyw75lpiPBj0rkoQDnY71Y"  # Replace with your actual API key
+        api_key = "your api key"  # Replace with your actual API key
         genai.configure(api_key=api_key)
 
         generation_config = {
