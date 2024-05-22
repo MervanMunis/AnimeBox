@@ -1,0 +1,31 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    name: gateway
+    discovery:
+      service-id: config
+      enabled: true
+    import: configserver:http://localhost:9296
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      mvc:
+        routes:
+          - id: ANIME-CATALOG
+            uri: lb://ANIME-CATALOG
+            predicates:
+              - Path=/anime/**
+          - id: USER-PROFILE
+            uri: lb://USER-PROFILE
+            predicates:
+              - Path=/user-profile/**
+          - id: ANIME-FINDER
+            uri: lb://ANIME-FINDER
+            predicates:
+                - Path=/api/anime-finder-bot/**

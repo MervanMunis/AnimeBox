@@ -1,0 +1,9 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: ANIME-FINDER
+  main:
+    allow-bean-definition-overriding: true
+  config:
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}

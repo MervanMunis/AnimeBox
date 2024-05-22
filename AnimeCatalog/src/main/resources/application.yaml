@@ -1,0 +1,27 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/animedb
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: ANIME-CATALOG
+  config:
+    name: anime-catalog
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}
+    discovery:
+      service-id: config
+      enabled: true
+      locator:
+        enabled: true
+        lowerCaseServiceId: true
+
+project:
+  poster: C:/Users/Mervan/Desktop/GitHub/AnimeBoxV2/backend/AnimeCatalog/posters
+

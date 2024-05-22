@@ -1,0 +1,27 @@
+server:
+  port: 8083
+spring:
+
+  application:
+    name: USER-PROFILE
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/userprofiledb
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  config:
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}
+    discovery:
+      service-id: config
+      enabled: true
+      locator:
+        enabled: true
+        lowerCaseServiceId: true
+
+project:
+  image: C:/Users/Mervan/Desktop/GitHub/AnimeBoxV2/backend/UserProfile/images
